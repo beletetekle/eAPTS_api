@@ -1,0 +1,41 @@
+{
+  "name": "PharmaceuticalStore",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "health_center": {
+      "type": "HealthCenter",
+      "required": true
+    },
+    "department": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "storage_size": {
+      "type": "number",
+      "required": true
+    },
+    "store_keeper": {
+      "type": "user",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

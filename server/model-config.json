@@ -34,5 +34,77 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "Region": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Zone": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Woreda": {
+    "dataSource": "db",
+    "public": true
+  },
+  "HealthCenterCategory": {
+    "dataSource": "db",
+    "public": true
+  },
+  "HealthCenter": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Department": {
+    "dataSource": "db",
+    "public": true
+  },
+  "PharmaceuticalStore": {
+    "dataSource": "db",
+    "public": true
+  },
+  "ServiceDeliveryUnit": {
+    "dataSource": "db",
+    "public": true
+  },
+  "ServiceType": {
+    "dataSource": "db",
+    "public": true
+  },
+  "SpecificDignostics": {
+    "dataSource": "db",
+    "public": true
+  },
+  "MedicineNationalCode": {
+    "dataSource": "db",
+    "public": true
+  },
+  "MedicalEquipment": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Medicine": {
+    "dataSource": "db",
+    "public": true
+  },
+  "CouncellingInformation": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Importer": {
+    "dataSource": "db",
+    "public": true
+  },
+  "DosageMeasurement": {
+    "dataSource": "db",
+    "public": true
+  },
+  "TherapeuticCategory": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Labelling": {
+    "dataSource": "db",
+    "public": true
   }
 }
