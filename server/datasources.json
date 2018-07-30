@@ -1,7 +1,11 @@
 {
   "db": {
+    "host": "localhost",
+    "port": 27017,
+    "database": "hmis",
+    "password": "hmisETH",
     "name": "db",
-    "connector": "memory",
-    "file": "mydata.json"
+    "user": "hmis",
+    "connector": "mongodb"
   }
 }

@@ -12,14 +12,28 @@
     },
     "description": {
       "type": "string"
-    },
-    "admin": {
-      "type": "user",
-      "required": true
     }
   },
   "validations": [],
-  "relations": {},
-  "acls": [],
+  "relations": {
+    "admin": {
+      "type": "belongsTo",
+      "model": "InternalUser",
+      "foreignKey": "adminId"
+    },
+    "zones": {
+      "type": "hasMany",
+      "model": "Zone",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
   "methods": {}
 }

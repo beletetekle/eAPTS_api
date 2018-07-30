@@ -12,14 +12,26 @@
     },
     "description": {
       "type": "string"
-    },
-    "admin": {
-      "type": "user",
-      "required": true
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "admin": {
+      "type": "belongsTo",
+      "model": "InternalUser",
+      "foreignKey": "adminId"
+    },
+    "woredas": {
+      "type": "hasMany",
+      "model": "Woreda",
+      "foreignKey": ""
+    },
+    "region": {
+      "type": "belongsTo",
+      "model": "Region",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {}
 }

@@ -15,7 +15,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "healthCenters": {
+      "type": "hasMany",
+      "model": "HealthCenter",
+      "foreignKey": "categoryId"
+    }
+  },
   "acls": [],
   "methods": {}
 }

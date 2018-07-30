@@ -11,14 +11,21 @@
     },
     "description": {
       "type": "string"
-    },
-    "admin": {
-      "type": "user",
-      "required": true
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "admin": {
+      "type": "belongsTo",
+      "model": "InternalUser",
+      "foreignKey": "adminId"
+    },
+    "zone": {
+      "type": "belongsTo",
+      "model": "Zone",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {}
 }

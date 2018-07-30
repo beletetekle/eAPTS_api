@@ -1,0 +1,70 @@
+{
+  "ids": {
+    "User": 6,
+    "AccessToken": 1,
+    "ACL": 1,
+    "RoleMapping": 6,
+    "Role": 6,
+    "Region": 1,
+    "Zone": 1,
+    "Woreda": 1,
+    "HealthCenterCategory": 1,
+    "HealthCenter": 1,
+    "Department": 1,
+    "PharmaceuticalStore": 1,
+    "ServiceDeliveryUnit": 1,
+    "ServiceType": 1,
+    "SpecificDignostics": 1,
+    "MedicineNationalCode": 1,
+    "MedicalEquipment": 1,
+    "Medicine": 1,
+    "CouncellingInformation": 1,
+    "Importer": 1,
+    "DosageMeasurement": 1,
+    "TherapeuticCategory": 1,
+    "Labelling": 1
+  },
+  "models": {
+    "User": {
+      "1": "{\"username\":\"root\",\"password\":\"$2a$10$DbqemM7yHbr5bDAF5.w6Z.cZgsiGdvxBnt65k8P0yciXG9TPIDR1S\",\"email\":\"root@hmis-eth.com\",\"emailVerified\":true,\"first_name\":\"Abebe\",\"last_name\":\"Kebede\",\"active\":false,\"id\":1}",
+      "2": "{\"username\":\"admin\",\"password\":\"$2a$10$R6UfrRrO7G7B4R1y0OA7fevrgZU5qn2nnH5F/I9arkLwdJ7dElmdu\",\"email\":\"owner@vere-italie.com\",\"emailVerified\":true,\"first_name\":\"\",\"last_name\":\"Owner\",\"active\":false,\"id\":2}",
+      "3": "{\"username\":\"region-admin\",\"password\":\"$2a$10$MOmc9NUsfJOKmtVITZrGF.7D8iOX0W8TqeFXVC7QCbAPUo5nOo6Qy\",\"email\":\"region-admin@hmis-eth.com\",\"emailVerified\":true,\"id\":3}",
+      "4": "{\"username\":\"zone-admin\",\"password\":\"$2a$10$6RN9r7rwxVUyWrWyroaA0Oz3n2616GeypUsb80KDMz0kI2hec/fR6\",\"email\":\"zone-admin@hmis-eth.com\",\"emailVerified\":true,\"active\":false,\"id\":4}",
+      "5": "{\"username\":\"woreda-admin\",\"password\":\"$2a$10$SqYFCW3a4V6vmSUsQ.zy7OpAnmdCkyJ2ZLXdNqWPV4xi.oj8Trzhu\",\"email\":\"woreda-admin@hmis-eth.com\",\"emailVerified\":true,\"active\":false,\"id\":5}"
+    },
+    "AccessToken": {},
+    "ACL": {},
+    "RoleMapping": {
+      "1": "{\"principalType\":\"USER\",\"principalId\":\"1\",\"roleId\":1,\"id\":1}",
+      "2": "{\"principalType\":\"USER\",\"principalId\":\"2\",\"roleId\":2,\"id\":2}",
+      "3": "{\"principalType\":\"USER\",\"principalId\":\"3\",\"roleId\":3,\"id\":3}",
+      "4": "{\"principalType\":\"USER\",\"principalId\":\"4\",\"id\":4}",
+      "5": "{\"principalType\":\"USER\",\"principalId\":\"5\",\"id\":5}"
+    },
+    "Role": {
+      "1": "{\"name\":\"super-admin\",\"created\":\"2018-07-29T15:14:01.858Z\",\"modified\":\"2018-07-29T15:14:01.858Z\",\"id\":1}",
+      "2": "{\"name\":\"admin\",\"created\":\"2018-07-29T15:14:01.860Z\",\"modified\":\"2018-07-29T15:14:01.860Z\",\"id\":2}",
+      "3": "{\"name\":\"region-admin\",\"created\":\"2018-07-29T15:18:57.562Z\",\"modified\":\"2018-07-29T15:18:57.562Z\",\"id\":3}",
+      "4": "{\"name\":\"zone-admin\",\"created\":\"2018-07-29T15:18:57.563Z\",\"modified\":\"2018-07-29T15:18:57.563Z\",\"id\":4}",
+      "5": "{\"name\":\"woreda-admin\",\"created\":\"2018-07-29T15:25:17.326Z\",\"modified\":\"2018-07-29T15:25:17.326Z\",\"id\":5}"
+    },
+    "Region": {},
+    "Zone": {},
+    "Woreda": {},
+    "HealthCenterCategory": {},
+    "HealthCenter": {},
+    "Department": {},
+    "PharmaceuticalStore": {},
+    "ServiceDeliveryUnit": {},
+    "ServiceType": {},
+    "SpecificDignostics": {},
+    "MedicineNationalCode": {},
+    "MedicalEquipment": {},
+    "Medicine": {},
+    "CouncellingInformation": {},
+    "Importer": {},
+    "DosageMeasurement": {},
+    "TherapeuticCategory": {},
+    "Labelling": {}
+  }
+}

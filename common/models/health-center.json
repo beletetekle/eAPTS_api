@@ -15,7 +15,6 @@
     },
     "address": {
       "type": "string",
-      "required": true
     },
     "phone": {
       "type": "string"
@@ -31,14 +30,21 @@
     },
     "web": {
       "type": "string"
-    },
-    "admin": {
-      "type": "user",
-      "required": true
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "admin": {
+      "type": "belongsTo",
+      "model": "InternalUser",
+      "foreignKey": "adminId"
+    },
+    "category": {
+      "type": "belongsTo",
+      "model": "HealthCenterCategory",
+      "foreignKey": "categoryId"
+    }
+  },
   "acls": [],
   "methods": {}
 }
