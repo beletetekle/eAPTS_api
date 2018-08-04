@@ -32,6 +32,11 @@
       "type": "hasMany",
       "model": "HealthFacility",
       "foreignKey": "adminId"
+    },
+    "referer": {
+      "type": "belongsTo",
+      "model": "InternalUser",
+      "foreignKey": "refererId"
     }
   },
   "acls": [
