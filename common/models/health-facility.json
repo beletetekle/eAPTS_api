@@ -1,5 +1,5 @@
 {
-  "name": "HealthCenter",
+  "name": "HealthFacility",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -14,7 +14,7 @@
       "type": "string"
     },
     "address": {
-      "type": "string",
+      "type": "string"
     },
     "phone": {
       "type": "string"
@@ -41,7 +41,7 @@
     },
     "category": {
       "type": "belongsTo",
-      "model": "HealthCenterCategory",
+      "model": "HealthFacilityCategory",
       "foreignKey": "categoryId"
     }
   },

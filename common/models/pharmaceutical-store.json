@@ -9,10 +9,6 @@
     "name": {
       "type": "string"
     },
-    "health_center": {
-      "type": "HealthCenter",
-      "required": true
-    },
     "department": {
       "type": "string"
     },
@@ -27,10 +23,6 @@
     },
     "storage_size": {
       "type": "number",
-      "required": true
-    },
-    "store_keeper": {
-      "type": "user",
       "required": true
     }
   },

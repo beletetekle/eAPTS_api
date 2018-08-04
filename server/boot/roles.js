@@ -11,7 +11,7 @@ module.exports = function(app) {
     var Region = app.models.Region;
     var Zone = app.models.Zone;
     var Woreda = app.models.Woreda;
-    var HealthCenter = app.models.HealthCenter;
+    var HealthFacility = app.models.HealthFacility;
 
 
     

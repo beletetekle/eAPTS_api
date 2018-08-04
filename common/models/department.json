@@ -10,13 +10,6 @@
       "type": "string",
       "required": true
     },
-    "health_center": {
-      "type": "HealthCenter"
-    },
-    "admin": {
-      "type": "user",
-      "required": true
-    },
     "phone": {
       "type": "string"
     },

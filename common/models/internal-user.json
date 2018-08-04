@@ -28,9 +28,9 @@
       "model": "Woreda",
       "foreignKey": "adminId"
     },
-    "healthCenters": {
+    "healthFacilities": {
       "type": "hasMany",
-      "model": "HealthCenter",
+      "model": "HealthFacility",
       "foreignKey": "adminId"
     }
   },

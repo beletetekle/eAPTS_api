@@ -1,5 +1,5 @@
 {
-  "name": "HealthCenterCategory",
+  "name": "HealthFacilityCategory",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -16,9 +16,9 @@
   },
   "validations": [],
   "relations": {
-    "healthCenters": {
+    "healthFacilities": {
       "type": "hasMany",
-      "model": "HealthCenter",
+      "model": "HealthFacility",
       "foreignKey": "categoryId"
     }
   },

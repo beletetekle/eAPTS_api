@@ -48,11 +48,11 @@
     "dataSource": "db",
     "public": true
   },
-  "HealthCenterCategory": {
+  "HealthFacilityCategory": {
     "dataSource": "db",
     "public": true
   },
-  "HealthCenter": {
+  "HealthFacility": {
     "dataSource": "db",
     "public": true
   },
