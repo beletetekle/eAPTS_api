@@ -3,7 +3,7 @@
     "host": "localhost",
     "port": 27017,
     "database": "hmis",
-    "password": "hmisETH",
+    "password": "",
     "name": "db",
     "user": "hmis",
     "connector": "mongodb"
