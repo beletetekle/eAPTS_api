@@ -6,8 +6,8 @@ module.exports = function(app) {
     var InternalUser = app.models.InternalUser;
     var Patient = app.models.Patient;
 
-    var Role = app.models.Role;
-    var RoleMapping = app.models.RoleMapping;
+    var Role = app.models.role;
+    var RoleMapping = app.models.roleMapping;
     var Region = app.models.Region;
     var Zone = app.models.Zone;
     var Woreda = app.models.Woreda;

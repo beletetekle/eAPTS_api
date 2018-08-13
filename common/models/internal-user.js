@@ -10,16 +10,17 @@ module.exports = function(InternalUser) {
                 referrerId: userId
             }
         };
-        
+
         InternalUser.find(filter, function (err, users){
             cb(null, users);
         })
 
     }
 
-    InternalUser.afterRemote('login', (context, remoteMethodOutput, next) =>{
+    InternalUser.afterRemote('login', (context, remoteMethodOutput, next) =>{        
         InternalUser.findOne( { where : {id : remoteMethodOutput.userId}, include: {relation: 'roles', scope: { include: 'role' }}}, function(err, user) {
-            remoteMethodOutput.user = user;
+            console.log(user, err);
+            remoteMethodOutput.internalUser = user;
             next();
         });
     });

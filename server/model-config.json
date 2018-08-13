@@ -25,14 +25,14 @@
     "dataSource": "db",
     "public": false
   },
-  "RoleMapping": {
+  "roleMapping": {
     "dataSource": "db",
-    "public": false,
+    "public": true,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
-  "Role": {
+  "role": {
     "dataSource": "db",
     "public": true
   },
@@ -121,6 +121,10 @@
     "public": true
   },
   "Diagnostic": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Permission": {
     "dataSource": "db",
     "public": true
   }

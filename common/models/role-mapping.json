@@ -1,0 +1,45 @@
+{
+  "name": "roleMapping",
+  "base": "RoleMapping",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "generated": true
+    },
+    "principalType": {
+      "type": "string",
+      "description": "The principal type, such as user, application, or role"
+    },
+    "principalId": {
+      "type": "string",
+      "index": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "role": {
+      "type": "belongsTo",
+      "model": "role",
+      "foreignKey": "roleId"
+    },
+    "user": {
+      "type": "belongsTo",
+      "model": "InternalUser",
+      "foreignKey": "principalId"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

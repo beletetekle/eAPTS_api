@@ -1,0 +1,40 @@
+{
+  "name": "Permission",
+  "plural": "permissions",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "roles": {
+      "type": "hasAndBelongsToMany",
+      "model": "role",
+      "foreignKey": ""
+    },
+    "users": {
+      "type": "hasAndBelongsToMany",
+      "model": "InternalUser",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}
