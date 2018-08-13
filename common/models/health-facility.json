@@ -30,6 +30,10 @@
     },
     "web": {
       "type": "string"
+    },
+    "isFederal": {
+      "type": "boolean",
+      "default": false
     }
   },
   "validations": [],
