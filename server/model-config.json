@@ -1,0 +1,119 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db",
+    "public": false
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Region": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Zone": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Woreda": {
+    "dataSource": "db",
+    "public": true
+  },
+  "HealthFacilityCategory": {
+    "dataSource": "db",
+    "public": true
+  },
+  "HealthFacility": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Department": {
+    "dataSource": "db",
+    "public": true
+  },
+  "PharmaceuticalStore": {
+    "dataSource": "db",
+    "public": true
+  },
+  "ServiceDeliveryUnit": {
+    "dataSource": "db",
+    "public": true
+  },
+  "ServiceType": {
+    "dataSource": "db",
+    "public": true
+  },
+  "SpecificDignostics": {
+    "dataSource": "db",
+    "public": true
+  },
+  "MedicineNationalCode": {
+    "dataSource": "db",
+    "public": true
+  },
+  "MedicalEquipment": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Medicine": {
+    "dataSource": "db",
+    "public": true
+  },
+  "CouncellingInformation": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Importer": {
+    "dataSource": "db",
+    "public": true
+  },
+  "DosageMeasurement": {
+    "dataSource": "db",
+    "public": true
+  },
+  "TherapeuticCategory": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Labelling": {
+    "dataSource": "db",
+    "public": true
+  },
+  "InternalUser": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Patient": {
+    "dataSource": "db",
+    "public": true
+  }
+}

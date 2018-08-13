@@ -1,0 +1,50 @@
+{
+  "name": "HealthFacility",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "position": {
+      "type": "geopoint"
+    },
+    "po_box": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "web": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "admin": {
+      "type": "belongsTo",
+      "model": "InternalUser",
+      "foreignKey": "adminId"
+    },
+    "category": {
+      "type": "belongsTo",
+      "model": "HealthFacilityCategory",
+      "foreignKey": "categoryId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

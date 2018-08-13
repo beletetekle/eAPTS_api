@@ -1,0 +1,62 @@
+{
+  "name": "CouncellingInformation",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "patient_id": {
+      "type": "string",
+      "required": true
+    },
+    "subscriber_id": {
+      "type": "string"
+    },
+    "pharmacist_id": {
+      "type": "string",
+      "required": true
+    },
+    "medicine_code": {
+      "type": "string",
+      "required": true
+    },
+    "dosage_form": {
+      "type": "string"
+    },
+    "strength": {
+      "type": "number"
+    },
+    "dose": {
+      "type": "number"
+    },
+    "frequency": {
+      "type": "number"
+    },
+    "drug_interaction": {
+      "type": "string"
+    },
+    "side_effect": {
+      "type": "string"
+    },
+    "adverse_effect": {
+      "type": "string"
+    },
+    "precaution": {
+      "type": "string"
+    },
+    "storage_condition": {
+      "type": "string"
+    },
+    "adminstration_rules": {
+      "type": "string"
+    },
+    "expiration_date": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

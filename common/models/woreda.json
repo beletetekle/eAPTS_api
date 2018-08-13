@@ -1,0 +1,31 @@
+{
+  "name": "Woreda",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "admin": {
+      "type": "belongsTo",
+      "model": "InternalUser",
+      "foreignKey": "adminId"
+    },
+    "zone": {
+      "type": "belongsTo",
+      "model": "Zone",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

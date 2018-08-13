@@ -1,0 +1,27 @@
+{
+  "name": "HealthFacilityCategory",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "healthFacilities": {
+      "type": "hasMany",
+      "model": "HealthFacility",
+      "foreignKey": "categoryId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

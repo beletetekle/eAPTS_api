@@ -1,0 +1,39 @@
+{
+  "name": "Region",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "admin": {
+      "type": "belongsTo",
+      "model": "InternalUser",
+      "foreignKey": "adminId"
+    },
+    "zones": {
+      "type": "hasMany",
+      "model": "Zone",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

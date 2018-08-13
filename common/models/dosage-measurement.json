@@ -1,0 +1,25 @@
+{
+  "name": "DosageMeasurement",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "medicine_name": {
+      "type": "string",
+      "required": true
+    },
+    "dosage_type": {
+      "type": "string",
+      "required": true
+    },
+    "measurement": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

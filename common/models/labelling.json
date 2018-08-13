@@ -1,0 +1,29 @@
+{
+  "name": "Labelling",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "strength": {
+      "type": "string"
+    },
+    "dosage_form": {
+      "type": "string"
+    },
+    "indication": {
+      "type": "string"
+    },
+    "storage_condition": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
