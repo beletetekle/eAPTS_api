@@ -1,0 +1,40 @@
+{
+  "name": "MedicineBin",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "batchNo": {
+      "type": "string"
+    },
+    "expiryDate": {
+      "type": "date"
+    },
+    "issued": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "validations": [],
+  "relations": {
+    "medicine": {
+      "type": "belongsTo",
+      "model": "Medicine",
+      "foreignKey": ""
+    },
+    "store": {
+      "type": "belongsTo",
+      "model": "Store",
+      "foreignKey": ""
+    },
+    "internalUser": {
+      "type": "belongsTo",
+      "model": "InternalUser",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

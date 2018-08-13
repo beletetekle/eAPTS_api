@@ -115,5 +115,17 @@
   "Patient": {
     "dataSource": "db",
     "public": true
+  },
+  "Store": {
+    "dataSource": "db",
+    "public": true
+  },
+  "MedicineBin": {
+    "dataSource": "db",
+    "public": true
+  },
+  "BatchSequence": {
+    "dataSource": "db",
+    "public": true
   }
 }

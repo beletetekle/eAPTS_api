@@ -42,6 +42,11 @@
       "type": "belongsTo",
       "model": "InternalUser",
       "foreignKey": "refererId"
+    },
+    "medicineBins": {
+      "type": "hasMany",
+      "model": "MedicineBin",
+      "foreignKey": ""
     }
   },
   "acls": [
