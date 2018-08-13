@@ -1,5 +1,5 @@
 {
-  "name": "Region",
+  "name": "PatientType",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -13,36 +13,30 @@
     "description": {
       "type": "string"
     },
-    "phone": {
+    "discount": {
+      "type": "number"
+    },
+    "isFree": {
+      "type": "boolean"
+    },
+    "sponsoredBy": {
       "type": "string"
     },
-    "position": {
-      "type": "geopoint"
+    "credit": {
+      "type": "string"
     },
-    "addresss": {
+    "insurance": {
       "type": "string"
     }
   },
   "validations": [],
   "relations": {
-    "admin": {
+    "createdBy": {
       "type": "belongsTo",
       "model": "InternalUser",
-      "foreignKey": "adminId"
-    },
-    "zones": {
-      "type": "hasMany",
-      "model": "Zone",
       "foreignKey": ""
     }
   },
-  "acls": [
-    {
-      "accessType": "READ",
-      "principalType": "ROLE",
-      "principalId": "$authenticated",
-      "permission": "ALLOW"
-    }
-  ],
+  "acls": [],
   "methods": {}
 }

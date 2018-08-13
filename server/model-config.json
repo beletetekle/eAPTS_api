@@ -115,5 +115,13 @@
   "Patient": {
     "dataSource": "db",
     "public": true
+  },
+  "PatientType": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Diagnostic": {
+    "dataSource": "db",
+    "public": true
   }
 }
