@@ -12,6 +12,15 @@
     },
     "description": {
       "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "position": {
+      "type": "geopoint"
+    },
+    "addresss": {
+      "type": "string"
     }
   },
   "validations": [],
