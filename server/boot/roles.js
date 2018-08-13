@@ -118,5 +118,76 @@ module.exports = function(app) {
         }
       })
     });
-    
+    Role.findOrCreate({
+      name: 'health-admin'
+    }, function(err, role) {
+      var admin = role;
+
+      InternalUser.findOrCreate({
+        active: false,
+        username: "health-admin",
+        email: "health-admin@hmis-eth.com",
+        emailVerified: true,
+        password: "health-admin"
+      }, function(err, user){
+        if (!err){
+          RoleMapping.create({
+            principalId: user.id,
+            principalType: "USER",
+            roleId: admin.id
+          }, function(err, principal) {
+            console.log(err, principal)
+          })
+
+        }
+      })
+    });
+    Role.findOrCreate({
+      name: 'store-admin'
+    }, function(err, role) {
+      var admin = role;
+
+      InternalUser.findOrCreate({
+        active: false,
+        username: "store-admin",
+        email: "store-admin@hmis-eth.com",
+        emailVerified: true,
+        password: "store-admin"
+      }, function(err, user){
+        if (!err){
+          RoleMapping.create({
+            principalId: user.id,
+            principalType: "USER",
+            roleId: admin.id
+          }, function(err, principal) {
+            console.log(err, principal)
+          })
+
+        }
+      })
+    });
+    Role.findOrCreate({
+      name: 'importer-supplier'
+    }, function(err, role) {
+      var admin = role;
+
+      InternalUser.findOrCreate({
+        active: false,
+        username: "importer-supplier",
+        email: "importer-supplier@hmis-eth.com",
+        emailVerified: true,
+        password: "woreda-admin"
+      }, function(err, user){
+        if (!err){
+          RoleMapping.create({
+            principalId: user.id,
+            principalType: "USER",
+            roleId: admin.id
+          }, function(err, principal) {
+            console.log(err, principal)
+          })
+
+        }
+      })
+    });
 };
