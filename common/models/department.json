@@ -21,7 +21,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "stores": {
+      "type": "hasMany",
+      "model": "Store",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {}
 }
