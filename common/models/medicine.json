@@ -25,6 +25,10 @@
     "councellingInformation": {
       "type": "object",
       "required": true
+    },
+    "dosage": {
+      "type": "object",
+      "required": true
     }
   },
   "validations": [],
