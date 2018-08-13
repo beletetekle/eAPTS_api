@@ -21,10 +21,20 @@
     },
     "phone": {
       "type": "string"
+    },
+    "tinNumber": {
+      "type": "string",
+      "required": true
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "internalUser": {
+      "type": "belongsTo",
+      "model": "InternalUser",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {}
 }

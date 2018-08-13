@@ -14,18 +14,17 @@
       "type": "string",
       "required": true
     },
-    "strength": {
+    "description": {
       "type": "string",
       "required": true
     },
-    "volume": {
-      "type": "number"
+    "productInformation": {
+      "type": "object",
+      "required": true
     },
-    "size": {
-      "type": "number"
-    },
-    "reagent": {
-      "type": "object"
+    "councellingInformation": {
+      "type": "object",
+      "required": true
     }
   },
   "validations": [],

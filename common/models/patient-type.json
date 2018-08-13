@@ -1,5 +1,5 @@
 {
-  "name": "HealthFacility",
+  "name": "PatientType",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -13,40 +13,28 @@
     "description": {
       "type": "string"
     },
-    "address": {
+    "discount": {
+      "type": "number"
+    },
+    "isFree": {
+      "type": "boolean"
+    },
+    "sponsoredBy": {
       "type": "string"
     },
-    "phone": {
+    "credit": {
       "type": "string"
     },
-    "position": {
-      "type": "geopoint"
-    },
-    "po_box": {
+    "insurance": {
       "type": "string"
-    },
-    "email": {
-      "type": "string"
-    },
-    "web": {
-      "type": "string"
-    },
-    "isFederal": {
-      "type": "boolean",
-      "default": false
     }
   },
   "validations": [],
   "relations": {
-    "admin": {
+    "createdBy": {
       "type": "belongsTo",
       "model": "InternalUser",
-      "foreignKey": "adminId"
-    },
-    "category": {
-      "type": "belongsTo",
-      "model": "HealthFacilityCategory",
-      "foreignKey": "categoryId"
+      "foreignKey": ""
     }
   },
   "acls": [],
