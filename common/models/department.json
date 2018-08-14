@@ -26,6 +26,11 @@
       "type": "hasMany",
       "model": "Store",
       "foreignKey": ""
+    },
+    "head": {
+      "type": "belongsTo",
+      "model": "InternalUser",
+      "foreignKey": ""
     }
   },
   "acls": [],
