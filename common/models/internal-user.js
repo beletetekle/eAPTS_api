@@ -7,6 +7,18 @@ module.exports = function(InternalUser) {
     InternalUser.myReferrals = function(req, res, cb) {
         const userId = req.accessToken.userId;
         const filter = {
+            include: {
+                relation: 'roles',
+                scope: { 
+                    // fields: ['roles'],
+                    include: { 
+                        relation: 'role', 
+                        scope: {
+                            fields : ['name']
+                        }
+                    }
+                }
+            },
             where: {
                 referrerId: userId
             }
