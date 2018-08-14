@@ -146,5 +146,13 @@
   "PatientDoctorAssignment": {
     "dataSource": "db",
     "public": true
+  },
+  "LabRequest": {
+    "dataSource": "db",
+    "public": true
+  },
+  "LabRequestItem": {
+    "dataSource": "db",
+    "public": true
   }
 }
