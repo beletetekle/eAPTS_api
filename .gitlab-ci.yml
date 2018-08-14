@@ -1,0 +1,40 @@
+image: node:6.10.3
+
+stages:
+  - ver
+  - init
+  - deploy
+
+ver:
+  stage: ver
+  script:
+    - node --version
+    - whoami
+init:
+  stage: init
+  script:
+    - npm cache clean
+    - rm -rf node-modules
+    - npm install
+    
+deploy_staging:
+  stage: deploy
+  script:
+    - git remote add heroku https://git.heroku.com/eapts-api.git
+    - git push heroku master
+    - echo "Deployed to staging server"
+  environment:
+  only:
+    - master
+
+deploy_production:
+  stage: deploy
+  script:
+    - git remote add heroku https://git.heroku.com/eapts-api.git
+    - git push heroku master
+    - echo "Deployed to production server"
+  environment:
+  
+  when: manual
+  only:
+    - master
