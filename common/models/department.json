@@ -31,6 +31,11 @@
       "type": "belongsTo",
       "model": "InternalUser",
       "foreignKey": ""
+    },
+    "serviceDeliveryUnits": {
+      "type": "hasMany",
+      "model": "ServiceDeliveryUnit",
+      "foreignKey": ""
     }
   },
   "acls": [],
