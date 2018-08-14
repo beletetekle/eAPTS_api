@@ -17,6 +17,9 @@
     "dataSource": "db",
     "public": false
   },
+  "Email": {
+    "dataSource": "emailDs"
+  },
   "AccessToken": {
     "dataSource": "db",
     "public": false
