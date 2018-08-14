@@ -22,7 +22,7 @@
     "position": {
       "type": "geopoint"
     },
-    "po_box": {
+    "POBox": {
       "type": "string"
     },
     "email": {
