@@ -142,5 +142,9 @@
   "Permission": {
     "dataSource": "db",
     "public": true
+  },
+  "PatientDoctorAssignment": {
+    "dataSource": "db",
+    "public": true
   }
 }

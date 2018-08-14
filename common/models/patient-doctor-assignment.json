@@ -1,0 +1,24 @@
+{
+  "name": "PatientDoctorAssignment",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "patients": {
+      "type": "hasOne",
+      "model": "Patient",
+      "foreignKey": ""
+    },
+    "internalUsers": {
+      "type": "hasOne",
+      "model": "InternalUser",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
