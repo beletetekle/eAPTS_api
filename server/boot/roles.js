@@ -21,7 +21,7 @@ module.exports = function(app) {
         if (!err){
           InternalUser.findOrCreate({
           username: "root",
-          email: "root@hmis-eth.com",
+          email: "root@eAPTS-eth.com",
           password: "root"
         }, function(err, user){
           // Add a super admin role to this user
@@ -50,7 +50,7 @@ module.exports = function(app) {
 
       InternalUser.findOrCreate({
         username: "region-admin",
-        email: "region-admin@hmis-eth.com",
+        email: "region-admin@eAPTS-eth.com",
         emailVerified: true,
         password: "region-admin"
       }, function(err, user){
@@ -74,7 +74,7 @@ module.exports = function(app) {
       InternalUser.findOrCreate({
         active: false,
         username: "zone-admin",        
-        email: "zone-admin@hmis-eth.com",
+        email: "zone-admin@eAPTS-eth.com",
         emailVerified: true,
         password: "zone-admin"
       }, function(err, user){
@@ -98,7 +98,7 @@ module.exports = function(app) {
       InternalUser.findOrCreate({
         active: false,
         username: "woreda-admin",
-        email: "woreda-admin@hmis-eth.com",
+        email: "woreda-admin@eAPTS-eth.com",
         emailVerified: true,
         password: "woreda-admin"
       }, function(err, user){
@@ -122,7 +122,7 @@ module.exports = function(app) {
       InternalUser.findOrCreate({
         active: false,
         username: "health-admin",
-        email: "health-admin@hmis-eth.com",
+        email: "health-admin@eAPTS-eth.com",
         emailVerified: true,
         password: "health-admin"
       }, function(err, user){
@@ -146,7 +146,7 @@ module.exports = function(app) {
       InternalUser.findOrCreate({
         active: false,
         username: "store-admin",
-        email: "store-admin@hmis-eth.com",
+        email: "store-admin@eAPTS-eth.com",
         emailVerified: true,
         password: "store-admin"
       }, function(err, user){
@@ -170,7 +170,7 @@ module.exports = function(app) {
       InternalUser.findOrCreate({
         active: false,
         username: "importer-supplier",
-        email: "importer-supplier@hmis-eth.com",
+        email: "importer-supplier@eAPTS-eth.com",
         emailVerified: true,
         password: "woreda-admin"
       }, function(err, user){

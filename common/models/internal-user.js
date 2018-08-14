@@ -27,8 +27,9 @@ module.exports = function(InternalUser) {
     });
 
     InternalUser.afterRemote('create', function(context, user, next) {
-        let referrerId = context.args.options.accessToken.referrerId
+        let referrerId = context.args.options.accessToken.userId;
         InternalUser.findById(referrerId, function(err, loggedInUser) {
+            if(err) next(err);
             user.referrerId = loggedInUser.id;
             user.save();
             user.createAccessToken({scopes: ["reset-password"]}, {}, function(err, token) {
@@ -57,29 +58,6 @@ module.exports = function(InternalUser) {
         });
     });
 
-    // InternalUser Referrals list remote Method
-   InternalUser.myReferrals = function(req, res, type, cb) {
-    const userId = req.accessToken.userId;
-    const filter = {
-      where: {
-         referrerId: userId
-      },
-      include: 'roles'
-    };
-    console.log(filter);
-    InternalUser.find(filter, function (err, users){
-      if(err) return cb(err);
-      if(!type) return cb(null, users)
-
-      let filterdUsers = users.filter((item) => {
-       return item['role']['name'] == type;
-      });
-      
-      return cb(null, filterdUsers);
-    })
-
-  }
-
     InternalUser.remoteMethod(
         'myReferrals',
         {
@@ -88,7 +66,6 @@ module.exports = function(InternalUser) {
         accepts: [
             {arg: 'req', type: 'object', 'http': {source: 'req'}},
             {arg: 'res', type: 'object', 'http': {source: 'res'}},
-            {arg : "type", type : "string"}
         ],
         returns:{ arg: 'users', type: 'Array'}
         }
