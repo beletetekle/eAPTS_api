@@ -1,0 +1,29 @@
+{
+  "name": "LabRequestItem",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "result": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "diagnostics": {
+      "type": "hasOne",
+      "model": "Diagnostic",
+      "foreignKey": ""
+    },
+    "labRequest": {
+      "type": "belongsTo",
+      "model": "LabRequest",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
