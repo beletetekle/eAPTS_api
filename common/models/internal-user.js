@@ -1,6 +1,7 @@
 'use strict';
 
 var senderAddress = "orbital.addis@gmail.com"; // replace this with the real one
+var WEB_CLIENT_URL = "http://localhost:3000"
 
 module.exports = function(InternalUser) {
     InternalUser.myReferrals = function(req, res, cb) {
@@ -27,7 +28,7 @@ module.exports = function(InternalUser) {
 
     InternalUser.afterRemote('create', function(context, user, next) {
 
-        InternalUser.findById(context.args.options.accessToken.userId, function(err, loggedInUser) {
+        InternalUser.findById(user.id, function(err, loggedInUser) {
             user.referrer(loggedInUser);
             user.save();
             user.createAccessToken({scopes: ["reset-password"]}, {}, function(err, token) {
@@ -44,7 +45,7 @@ module.exports = function(InternalUser) {
                 InternalUser.app.models.Email.send({
                     to: user.email,
                     from: senderAddress,
-                    subject: 'Vere Italie Account Verification',
+                    subject: 'Account Verification',
                     html: html,
                 }, function(err) {
                     if (err) return console.log(err, '> error sending password reset email');
