@@ -186,4 +186,54 @@ module.exports = function(app) {
         }
       })
     });
+
+    Role.findOrCreate({
+      name: 'doctor'
+    }, function(err, role) {
+      var admin = role;
+
+      InternalUser.findOrCreate({
+        active: false,
+        username: "teka",
+        email: "teka@doctors.com",
+        emailVerified: true,
+        password: "teka"
+      }, function(err, user){
+        if (!err){
+          RoleMapping.create({
+            principalId: user.id,
+            principalType: "USER",
+            roleId: admin.id
+          }, function(err, principal) {
+            console.log(err, principal)
+          })
+
+        }
+      })
+    });
+
+    Role.findOrCreate({
+      name: 'nurse'
+    }, function(err, role) {
+      var admin = role;
+
+      InternalUser.findOrCreate({
+        active: false,
+        username: "sister",
+        email: "sister@sisters.com",
+        emailVerified: true,
+        password: "sister"
+      }, function(err, user){
+        if (!err){
+          RoleMapping.create({
+            principalId: user.id,
+            principalType: "USER",
+            roleId: admin.id
+          }, function(err, principal) {
+            console.log(err, principal)
+          })
+
+        }
+      })
+    });
 };

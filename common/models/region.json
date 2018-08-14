@@ -21,6 +21,12 @@
     },
     "addresss": {
       "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
     }
   },
   "validations": [],
