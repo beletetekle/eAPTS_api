@@ -27,9 +27,9 @@ module.exports = function(InternalUser) {
     });
 
     InternalUser.afterRemote('create', function(context, user, next) {
-
-        InternalUser.findById(user.id, function(err, loggedInUser) {
-            user.referrer(loggedInUser);
+        let referrerId = context.args.options.accessToken.referrerId
+        InternalUser.findById(referrerId, function(err, loggedInUser) {
+            user.referrerId = loggedInUser.id;
             user.save();
             user.createAccessToken({scopes: ["reset-password"]}, {}, function(err, token) {
                 var url = WEB_CLIENT_URL  + '#/resetPassword';
