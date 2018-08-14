@@ -47,7 +47,7 @@
       "model": "HealthFacility",
       "foreignKey": "adminId"
     },
-    "referer": {
+    "referrer": {
       "type": "belongsTo",
       "model": "InternalUser",
       "foreignKey": "refererId"
