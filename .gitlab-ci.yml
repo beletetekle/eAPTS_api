@@ -1,16 +1,48 @@
-# This is a sample build configuration for JavaScript.
-# Check our guides at https://confluence.atlassian.com/x/14UWN for more examples.
-# Only use spaces to indent your .yml configuration.
-# -----
-# You can specify a custom docker image from Docker Hub as your build environment.
+image: node:6.10.3
 
-image: node:6.9.4
+stages:
+  - ver
+  - init
+  - tests
+  - deploy
 
-pipelines:
-  default:
-    - step:
-        caches:
-          - node
-        script: # Modify the commands below to build your repository.
-          - npm install
-          - git push https://git.heroku.com/eapts-api.git HEAD
+ver:
+  stage: ver
+  script:
+    - node --version
+    - whoami
+init:
+  stage: init
+  script:
+    - npm cache clean
+    - rm -rf node-modules
+    - npm install
+run_tests:
+  stage: tests
+  script:
+    - npm test
+
+deploy_staging:
+  stage: deploy
+  script:
+    - git remote add heroku https://git.heroku.com/eapts-api.git
+    - git push heroku master
+    - echo "Deployed to staging server"
+  environment:
+  name: staging
+  url: https://eapts-api.herokuapp.com/
+  only:
+    - master
+
+deploy_production:
+  stage: deploy
+  script:
+    - git remote add heroku https://git.heroku.com/eapts-api.git
+    - git push heroku master
+    - echo "Deployed to production server"
+  environment:
+  name: production
+  url: https://eapts-api.herokuapp.com/
+  when: manual
+  only:
+    - master
