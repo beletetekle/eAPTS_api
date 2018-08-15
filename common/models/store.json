@@ -1,5 +1,5 @@
 {
-  "name": "Region",
+  "name": "Store",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -10,45 +10,35 @@
       "type": "string",
       "required": true
     },
-    "description": {
+    "location": {
       "type": "string"
     },
     "phone": {
       "type": "string"
     },
-    "position": {
-      "type": "geopoint"
-    },
-    "addresss": {
-      "type": "string"
-    },
     "email": {
       "type": "string"
     },
-    "website": {
+    "maxStock": {
+      "type": "string"
+    },
+    "minStock": {
       "type": "string"
     }
   },
   "validations": [],
   "relations": {
-    "admin": {
+    "department": {
       "type": "belongsTo",
-      "model": "InternalUser",
-      "foreignKey": "adminId"
+      "model": "Department",
+      "foreignKey": ""
     },
-    "zones": {
+    "medicineBins": {
       "type": "hasMany",
-      "model": "Zone",
+      "model": "MedicineBin",
       "foreignKey": ""
     }
   },
-  "acls": [
-    {
-      "accessType": "READ",
-      "principalType": "ROLE",
-      "principalId": "$authenticated",
-      "permission": "ALLOW"
-    }
-  ],
+  "acls": [],
   "methods": {}
 }

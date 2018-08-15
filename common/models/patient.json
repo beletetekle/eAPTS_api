@@ -5,9 +5,49 @@
   "options": {
     "validateUpsert": true
   },
-  "properties": {},
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "middleName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "nationalId": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "city": {
+      "type": "string"
+    },
+    "woreda": {
+      "type": "string"
+    },
+    "kebele": {
+      "type": "string"
+    },
+    "motherName": {
+      "type": "string"
+    }
+  },
   "validations": [],
   "relations": {},
-  "acls": [],
+  "acls": [
+    {
+      "principalType": "ROLE",
+      "principalId": "doctor",
+      "permission": "ALLOW",
+      "property": "create"
+    }
+  ],
   "methods": {}
 }

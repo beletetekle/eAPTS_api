@@ -1,0 +1,22 @@
+{
+  "name": "BatchSequence",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "batchNo": {
+      "type": "string",
+      "required": true
+    },
+    "expiryDate": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

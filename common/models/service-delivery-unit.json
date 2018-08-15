@@ -24,7 +24,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "department": {
+      "type": "belongsTo",
+      "model": "Department",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {}
 }

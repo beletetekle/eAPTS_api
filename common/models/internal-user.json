@@ -9,6 +9,15 @@
     "username": {
       "type": "string",
       "required": true
+    },
+    "full_name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
     }
   },
   "validations": [],
@@ -38,20 +47,77 @@
       "model": "HealthFacility",
       "foreignKey": "adminId"
     },
-    "referer": {
+    "referrer": {
       "type": "belongsTo",
       "model": "InternalUser",
-      "foreignKey": "refererId"
+      "foreignKey": "referrerId"
+    },
+    "medicineBins": {
+      "type": "hasMany",
+      "model": "MedicineBin",
+      "foreignKey": ""
+    },
+    "importers": {
+      "type": "hasOne",
+      "model": "Importer",
+      "foreignKey": ""
     }
   },
   "acls": [
     {
       "principalType": "ROLE",
-      "principalId": "$owner",
+      "principalId": "super-admin",
       "permission": "ALLOW",
-      "property": [
-        "__get__regions"
-      ]
+      "property": "create"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "region-admin",
+      "permission": "ALLOW",
+      "property": "create"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "zone-admin",
+      "permission": "ALLOW",
+      "property": "create"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "woreda-admin",
+      "permission": "ALLOW",
+      "property": "create"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "health-facility-admin",
+      "permission": "ALLOW",
+      "property": "create"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "deleteById"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "resetPassword"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
     }
   ],
   "methods": {}

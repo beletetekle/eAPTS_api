@@ -22,7 +22,7 @@
     "position": {
       "type": "geopoint"
     },
-    "po_box": {
+    "POBox": {
       "type": "string"
     },
     "email": {
@@ -30,6 +30,10 @@
     },
     "web": {
       "type": "string"
+    },
+    "isFederal": {
+      "type": "boolean",
+      "default": false
     }
   },
   "validations": [],

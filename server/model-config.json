@@ -17,6 +17,9 @@
     "dataSource": "db",
     "public": false
   },
+  "Email": {
+    "dataSource": "emailDs"
+  },
   "AccessToken": {
     "dataSource": "db",
     "public": false
@@ -25,14 +28,14 @@
     "dataSource": "db",
     "public": false
   },
-  "RoleMapping": {
+  "roleMapping": {
     "dataSource": "db",
-    "public": false,
+    "public": true,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
-  "Role": {
+  "role": {
     "dataSource": "db",
     "public": true
   },
@@ -113,6 +116,46 @@
     "public": true
   },
   "Patient": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Store": {
+    "dataSource": "db",
+    "public": true
+  },
+  "MedicineBin": {
+    "dataSource": "db",
+    "public": true
+  },
+  "BatchSequence": {
+    "dataSource": "db",
+    "public": true
+  },
+  "PatientType": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Diagnostic": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Permission": {
+    "dataSource": "db",
+    "public": true
+  },
+  "PatientDoctorAssignment": {
+    "dataSource": "db",
+    "public": true
+  },
+  "LabRequest": {
+    "dataSource": "db",
+    "public": true
+  },
+  "LabRequestItem": {
+    "dataSource": "db",
+    "public": true
+  },
+  "DTP": {
     "dataSource": "db",
     "public": true
   }

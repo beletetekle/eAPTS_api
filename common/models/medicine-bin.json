@@ -1,5 +1,5 @@
 {
-  "name": "Importer",
+  "name": "MedicineBin",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -7,28 +7,38 @@
   },
   "properties": {
     "name": {
-      "type": "string",
-      "required": true
-    },
-    "address": {
       "type": "string"
     },
-    "email": {
+    "remark": {
       "type": "string"
     },
-    "web": {
+    "batchNo": {
       "type": "string"
     },
-    "phone": {
-      "type": "string"
+    "expiryDate": {
+      "type": "date"
     },
-    "tinNumber": {
-      "type": "string",
-      "required": true
+    "issued": {
+      "type": "number",
+      "default": 0
+    },
+    "received": {
+      "type": "number",
+      "default": 0
     }
   },
   "validations": [],
   "relations": {
+    "medicine": {
+      "type": "belongsTo",
+      "model": "Medicine",
+      "foreignKey": ""
+    },
+    "store": {
+      "type": "belongsTo",
+      "model": "Store",
+      "foreignKey": ""
+    },
     "internalUser": {
       "type": "belongsTo",
       "model": "InternalUser",
